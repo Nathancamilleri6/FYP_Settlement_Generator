@@ -7,18 +7,6 @@ from heapq import *
 
 
 def heuristic(a, b, map):
-    # penalize going up hills diagonally, even if the settings allow it
-    # print("a: ", a)
-    # print("b: ", b)
-    # print("map: ", map)
-    # print("map grid: ", map.grid)
-    # print("width: ", map.w)
-    # print("length: ", map.h)
-    # print("map altitudes: ", map.altitudes)
-    # print("map altitudes a: ", map.altitudes[a[0], a[1]])
-    # print("map altitudes b: ", map.altitudes[b[0], b[1]])
-    # print("map altitudes a-b: ", map.altitudes[a[0], a[1]] - map.altitudes[b[0], b[1]])
-    # print("map altitudes a-b ** 2: ", (map.altitudes[a[0], a[1]] - map.altitudes[b[0], b[1]]) ** 2)
     return (b[0] - a[0]) ** 2 + (b[1] - a[1]) ** 2 + (map.altitudes[a[0], a[1]] - map.altitudes[b[0], b[1]]) ** 2
 
 
